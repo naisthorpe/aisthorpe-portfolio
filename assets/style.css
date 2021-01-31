@@ -2,29 +2,28 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: black;
     font-family: 'Courier New', Courier, monospace;
 }
 
 body {
-    background-color: #336600;
+    background-color: #707070;
 }
 
 header {
     display: inline-flex;
     flex-wrap: wrap;
     width: 100%;
-    border: 1px solid red;
     margin: 0 auto;
     justify-content: space-between;
     padding: 1%;
-    background-color: #787878;
+    background-color: #181818;
 }
 
 header h1 {
     display: flex;
     flex-basis: 50%;
     font-size: 50px;
+    color: #fff;
 }
 
 header nav {
@@ -32,8 +31,24 @@ header nav {
     justify-content: flex-end;
     padding-top: 15px;
     flex-basis: 50%;
+    color: #fff;
 }
 
+header nav ul {
+    display: inline-flex;
+    flex-basis: 60%;
+    color: #fff;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-align: center;
+}
 
 #head-background {
     content: "";
@@ -56,21 +71,77 @@ header nav {
 
 a {
     text-decoration: none;
+    color: #fff;
 }
-.links {
+
+a:hover {
+
+}
+
+#about-me {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin: 2% auto;
 }
 
-header nav ul {
-    display: inline-flex;
-    flex-basis: 60%;
+.title {
+    display: flex;
+    flex-basis: 25%;
+    padding-right: 5px;
+    border-right: 2px solid black;
+    justify-content: flex-end;
 }
 
-header nav ul li {
-    width: 100%;
-    list-style-type: none;
+#about-me .content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
     text-align: center;
 }
+
+#work-section {
+    content: "";
+    display: flex;
+    flex-direction: row;
+    margin: 2% auto;
+}
+
+footer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+footer h1 {
+    display: flex;
+    flex-basis: 50%;
+    font-size: 50px;
+    color: #fff;
+    text-align: right;
+}
+
+footer nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+    flex-basis: 50%;
+    color: #fff;
+}
+
+footer nav ul {
+    display: inline-flex;
+    flex-basis: 60%;
+    color: #fff;
+    justify-content: space-around;
+}
+
+footer nav ul li {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-align: center;
