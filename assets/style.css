@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #336600;
+}
+
+header {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid red;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: #787878;
+}
+
+header h1 {
+    display: flex;
+    flex-basis: 50%;
+    font-size: 50px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+    flex-basis: 50%;
+}
+
+
+#head-background {
+    content: "";
+    display: flex;
+    flex-direction: row-reverse;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("images/wood-banner.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#subtitle {
+    display: flex;
+    align-self: flex-end;
+    padding: 2% 5%;
+    font-size: x-large;
+}
+
+a {
+    text-decoration: none;
+}
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: inline-flex;
+    flex-basis: 60%;
+}
+
+header nav ul li {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+}
