@@ -58,8 +58,8 @@ header nav ul li {
     flex-direction: row-reverse;
     height: 300px;
     width: 100%;
-    margin-bottom: 25px;
-    background-image: url("images/wood-banner.png");
+    margin-bottom: 20px;
+    background-image: url("images/nick-banner-center.png");
     background-size: cover;
     background-position: center;
 }
@@ -67,8 +67,12 @@ header nav ul li {
 #subtitle {
     display: flex;
     align-self: flex-end;
-    padding: 2% 5%;
-    font-size: x-large;
+    margin: 4% 5%;
+    font-size: large;
+    color: #fff;
+    background-color: #181818;
+    font-style: italic;
+    padding: 2px 4px;
 }
 
 a {
@@ -83,11 +87,19 @@ a:hover {
     color: #000000;
 }
 
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
 #about-me {
     display: flex;
     flex-direction: row;
     margin: 2% auto;
     flex-basis: 10%;
+    justify-content: flex-end;
 }
 
 .title {
@@ -96,10 +108,12 @@ a:hover {
     padding-right: 5px;
     border-right: 2px solid black;
     justify-content: flex-end;
-    font-size: large;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: right;
 }
 
-#about-me .content {
+.content {
     display: flex;
     flex-direction: column;
     flex-basis: 90%;
@@ -120,18 +134,48 @@ a:hover {
     flex-basis: 90%;
 }
 
-#top-work-block {
-    display: flex;
+#surf-report-block {
     flex-basis: 95%;
+    background-image: url(images/surfingusa.png);  
+    background-position: 25%;
+}
+
+#led-wall-block {
+     background-image: url(images/led.jpg);
+     background-position: 50%;
+
+  }
+
+#calculator-block {
+    background-image: url(images/bg-mountains.png);
+}
+
+#pastel-puzzles-block {
+    background-image: url(images/bg-moon.png);
+    
+}
+
+#run-buddy-block {
+    background-image: url(images/bg-snow.png);
+    background-position: 50% 100%;
 }
 
 .work-block {
-    display: inline-flex;
-    flex-direction: column-reverse;
+    display: flex;
+    flex-direction: row;
     height: 250px;
     flex-basis: 45%;
     border: 2px solid #fff;
     margin: 10px 0;    
+}
+
+.work-block-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #fff;
+    align-self: flex-end;
+    padding: 20px 10px;
 }
 
 footer {
@@ -139,19 +183,21 @@ footer {
     flex-wrap: wrap;
     width: 100%;
     margin: 0 0 40px 0;
+    background-color: #303030;
+    padding: 15px 0;
 }
 
-footer h1 {
-    display: flex;
-    text-align: right;
-}
-
-footer nav {
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-    flex-basis: 75%;
+footer .title {
+    display: inline-flex;
+    flex-basis: 14.5%;
     color: #fff;
+}
+footer nav {
+    display: inline-flex;
+    justify-content: center;
+    flex-basis: 85.5%;
+    color: #fff;
+    align-items: center;
 }
 
 footer nav ul {
