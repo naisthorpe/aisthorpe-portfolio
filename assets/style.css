@@ -39,6 +39,7 @@ header nav ul {
     flex-basis: 60%;
     color: #fff;
     justify-content: space-around;
+    align-items: center;
 }
 
 header nav ul li {
@@ -47,6 +48,7 @@ header nav ul li {
     list-style-type: none;
     justify-content: center;
     flex-wrap: nowrap;
+    white-space: nowrap;
     text-align: center;
 }
 
@@ -72,57 +74,79 @@ header nav ul li {
 a {
     text-decoration: none;
     color: #fff;
+    padding: 0 2px 2px 2px;
+    border-bottom: 2px solid #fff;
 }
 
 a:hover {
-
+    background-color: #d3d3d3;
+    color: #000000;
 }
 
 #about-me {
     display: flex;
     flex-direction: row;
     margin: 2% auto;
+    flex-basis: 10%;
 }
 
 .title {
     display: flex;
-    flex-basis: 25%;
+    flex-basis: 15%;
     padding-right: 5px;
     border-right: 2px solid black;
     justify-content: flex-end;
+    font-size: large;
 }
 
 #about-me .content {
     display: flex;
     flex-direction: column;
-    flex-basis: 75%;
+    flex-basis: 90%;
     text-align: center;
 }
 
 #work-section {
-    content: "";
     display: flex;
     flex-direction: row;
     margin: 2% auto;
+    flex-basis: 10%;
+}
+
+#work-blocks {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 90%;
+}
+
+#top-work-block {
+    display: flex;
+    flex-basis: 95%;
+}
+
+.work-block {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    height: 250px;
+    flex-basis: 45%;
+    border: 2px solid #fff;
+    margin: 10px 0;    
 }
 
 footer {
     display: inline-flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: 0 auto;
-    justify-content: space-between;
+    margin: 0 0 40px 0;
 }
 
-/* footer h1 {
+footer h1 {
     display: flex;
-    flex-basis: 50%;
-    font-size: 50px;
-    color: #fff;
     text-align: right;
-} */
+}
 
-footer div {
+footer nav {
     display: flex;
     justify-content: center;
     padding-top: 15px;
@@ -130,7 +154,7 @@ footer div {
     color: #fff;
 }
 
-footer div ul {
+footer nav ul {
     display: inline-flex;
     flex-basis: 100%;
     color: #fff;
@@ -138,14 +162,8 @@ footer div ul {
     list-style-type: none;
 }
 
-footer div ul li {
-    display: flex;
+footer nav ul li {
     width: 100%;
     justify-content: center;
     text-align: center;
 }
-
-/* footer .content {
-    display: inline-flex;
-
-} */
