@@ -90,8 +90,14 @@ a:hover {
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    font-weight: bold;
     line-height: 1.5;
+    text-align: left;
+    padding: 0 2%;
+}
+
+#intro {
+    font-weight: bold;
+    text-align: center;
 }
 
 #about-me {
@@ -142,22 +148,22 @@ p {
 
 #led-wall-block {
      background-image: url(images/led.jpg);
-     background-position: 50%;
-
+     background-position: center;
   }
 
 #calculator-block {
-    background-image: url(images/bg-mountains.png);
+    background-image: url(images/calc.png);
+    background-position: center;
 }
 
 #pastel-puzzles-block {
-    background-image: url(images/bg-moon.png);
-    
+    background-image: url(images/puzzle.png);
+    background-position: center;
 }
 
 #run-buddy-block {
-    background-image: url(images/bg-snow.png);
-    background-position: 50% 100%;
+    background-image: url(images/running-man.png);
+    background-position: center;
 }
 
 .work-block {
