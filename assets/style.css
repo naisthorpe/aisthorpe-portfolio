@@ -178,8 +178,8 @@ p {
     position: relative;  
 }
 
-.work-block:hover {
-    background-color: #000000;
+.work-block-link:hover {
+    background-color: #414040;
 }
 
 .work-block-title {
@@ -197,7 +197,13 @@ p {
     height: 100%;
     top: 0;
     left: 0;
-    opacity: 0.5;
+    opacity: 0.25;
+}
+
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 /* this section is where I set background images for work blocks */
