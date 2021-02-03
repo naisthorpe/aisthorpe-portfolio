@@ -5,13 +5,24 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* set body background color */
 body {
-    background-color: #707070;
+    background-color: #D1D1D1;
 }
 
-header {
+/* class for flex with wrap */
+.inline-flex-wrap {
     display: inline-flex;
     flex-wrap: wrap;
+}
+
+/* remove bullets from lists */
+..no-bullet {
+    list-style-type: none;
+}
+
+/* header configurations */
+header {
     width: 100%;
     margin: 0 auto;
     justify-content: space-between;
@@ -20,14 +31,12 @@ header {
 }
 
 header h1 {
-    display: flex;
     flex-basis: 60%;
     font-size: 50px;
     color: #fff;
 }
 
 header nav {
-    display: flex;
     justify-content: flex-end;
     padding-top: 15px;
     flex-basis: 40%;
@@ -35,7 +44,7 @@ header nav {
 }
 
 header nav ul {
-    display: inline-flex;
+    display: flex;
     flex-basis: 80%;
     color: #fff;
     justify-content: space-around;
@@ -45,14 +54,15 @@ header nav ul {
 header nav ul li {
     display: flex;
     width: 100%;
-    list-style-type: none;
     justify-content: center;
     flex-wrap: nowrap;
     white-space: nowrap;
     text-align: center;
 }
 
-#head-background {
+/* background image for between header and content */
+/* section will have background image and subtitle */
+.head-background {
     content: "";
     display: flex;
     flex-direction: row-reverse;
@@ -64,7 +74,7 @@ header nav ul li {
     background-position: center;
 }
 
-#subtitle {
+.subtitle {
     display: flex;
     align-self: flex-end;
     margin: 4% 5%;
@@ -75,6 +85,7 @@ header nav ul li {
     padding: 2px 4px;
 }
 
+/* formatting links */
 a {
     text-decoration: none;
     color: #fff;
@@ -82,6 +93,7 @@ a {
     border-bottom: 2px solid #fff;
 }
 
+/* formatting hover for links */
 a:hover {
     background-color: #d3d3d3;
     color: #000000;
@@ -95,12 +107,12 @@ p {
     padding: 0 2%;
 }
 
-#intro {
+.bold-center {
     font-weight: bold;
     text-align: center;
 }
 
-#about-me {
+.about-me {
     display: flex;
     flex-direction: row;
     margin: 2% auto;
@@ -126,14 +138,14 @@ p {
     text-align: center;
 }
 
-#work-section {
+.work-section {
     display: flex;
     flex-direction: row;
     margin: 2% auto;
     flex-basis: 10%;
 }
 
-#work-blocks {
+.work-blocks {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -272,7 +284,7 @@ footer nav ul li {
         flex-direction: column;
     }
 
-    #contact-me {
+    .contact-me {
         flex-direction: column;
     }
 }
