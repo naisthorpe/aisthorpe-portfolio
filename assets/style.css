@@ -68,7 +68,6 @@ header nav {
 /* section will have background image and subtitle */
 .head-background {
     content: "";
-    display: flex;
     flex-direction: row-reverse;
     height: 300px;
     width: 100%;
@@ -80,11 +79,13 @@ header nav {
 
 /* subtitle formatting */
 .subtitle {
+    align-self: flex-end;
     margin: 4% 5%;
-    font-size: large;
+    font-size: 27px;
     color: #fff;
     background-color: #181818;
     font-style: italic;
+    font-weight: bold;
     padding: 2px 4px;
 }
 
