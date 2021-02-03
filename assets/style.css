@@ -49,6 +49,7 @@ header nav {
     color: #fff;
 }
 
+/* this spreads links across their container */
 .spread-links {
     display: flex;
     flex-basis: 100%; 
@@ -56,6 +57,7 @@ header nav {
     align-items: center;
 } 
 
+/* this is a class to remove flex wrapping and center text */
 .no-wrap {
     justify-content: center;
     white-space: nowrap;
@@ -76,9 +78,8 @@ header nav {
     background-position: center;
 }
 
+/* subtitle formatting */
 .subtitle {
-    display: flex;
-    align-self: flex-end;
     margin: 4% 5%;
     font-size: large;
     color: #fff;
@@ -137,34 +138,37 @@ p {
     padding: 0 2%;
 }
 
+/* class to bold and center text */
 .bold-center {
     font-weight: bold;
     text-align: center;
 }
 
+/* add some top/bottom space to each section container */
+/* keeps the content from squishing together */
 .main-container {
     margin: 3% auto;
 }
 
+/* formatting titles */
 .title {
-    justify-content: flex-end;
-    flex-basis: 15%;
-    padding-right: 5px;
-    border-right: 2px solid black;
+    flex-basis: 15%; /* take up 15% of screen */
+    padding-right: 5px; /* pad side for space between border */
+    border-right: 2px solid black; /* add line to divide title and content */
     font-size: 35px;
     font-weight: bolder;
-    text-align: right;
+    text-align: right; /* push text to the right of container */
 }
 
+/* formatting content next to titles */
 .content {
     flex-direction: column;
-    flex-basis: calc(85% - 5px);
+    flex-basis: 85%;
     text-align: center;
 }
 
+/* establish container for block */
 .block-container {
-    /* display: inline-flex;
-    flex-wrap: wrap; */
     justify-content: space-around;
     flex-basis: 85%;
 }
@@ -178,10 +182,29 @@ p {
     position: relative;  
 }
 
-.work-block-link:hover {
-    background-color: #414040;
+/* add hyperlink to work blocks */
+.work-block-link {
+    position: absolute; /* positioning hyperlink relative to work blocks */
+    width: 100%; /* width same as container */
+    height: 100%; /* height same as container */
+    top: 0; /* position at top of container */
+    left: 0; /* position at left of container */
 }
 
+.work-block-link:hover {
+    background-color: #414040; /* background color when hover */
+    opacity: 0.25; /* make sure you can see through it */
+}
+
+/* this hides the link text visually while allowing link text */
+/* useful for screen reader accessibility */
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* format work block titles */
 .work-block-title {
     display: flex;
     flex-direction: column;
@@ -191,23 +214,9 @@ p {
     padding: 20px 10px;
 }
 
-.work-block-link {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.25;
-}
-
-.hide-text {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
 /* this section is where I set background images for work blocks */
 #surf-report-block {
+    /* width 95% so there is some space on either side */
     flex-basis: 95%; /* makes this block always the largest */
     background-image: url(images/surfingusa.png);  
     background-position: 25%;
@@ -235,91 +244,106 @@ p {
 
 @media screen and (max-width: 992px) {
     
+    /* stack containers in header and center the content */
     header {
         flex-direction: column;
         justify-content: center;
         text-align: center;
     }
 
+    /* make h1 container in header take up whole width */
+    /* center the content */
     header h1 {
         flex-basis: 100%;
         justify-content: center;
     }
     
+    /* make nav container in header take up whole width */
+    /* center the content */
     header nav {
         flex-basis: 100%;
         justify-content: center;
     }
+
+    /* change anything with flex-wrap class to center content */
 
     .flex-wrap {
         justify-content: center;
     }
 
+    /* change anything with flex-end class to center content */
+    /* previously moved contents to end */
     .flex-end {
         justify-content: center;
     }
 
+    /* make container content center */
     .main-container {
         justify-content: center; 
     }
     
+    /* adjust title formatting */
     .title {
-        border-right: none;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        font-size: 56px;
-        padding-bottom: 2%;
-        text-decoration: underline;
-        flex-basis: 100%;
+        border-right: none; /* remove border */
+        text-align: center; /* center text */
+        font-size: 56px; /* change title font */
+        padding-bottom: 2%; /* add some space between title and content */
+        text-decoration: underline; /* underline titles */
+        flex-basis: 100%; /* make title take up full width */
     }
 
+    /* center paragraph text */
     p {
         text-align: center;
     }
 
+    /* surf block now takes up full container width */
     #surf-report-block {
         flex-basis: 100%;
     }
 
+    /* make blocks have space between instead of space around */
     .block-container {
         justify-content: space-between;
-        /* flex-wrap: nowrap; */
     }
 
     .work-block {
-        justify-content: flex-start;
+        justify-content: flex-start; /* move block titles to left of container */
+        flex-basis: 47%; /* adjust width to close the gap between blocks */
     }
 }
 
 @media screen and (max-width: 768px) {
    
+    /* add some space around links and make them take up the whole screen */
     header nav {
         padding-bottom: 10px;
         flex-basis: 100%;
     }
 
+    /* change surf block width to match the rest */
+    /* adjust background image position to show the dude */
     #surf-report-block {
         flex-basis: auto;
         background-position: 35%;
     }
 
+    /* make work blocks fill entire container */
     .work-block {
         flex-basis: 100%;
     }
 
+    /* change title font sizes */
     .title {
         font-size: 45px;
     }
     
+    /* make paragraph font smaller for smaller screens */
     p {
         font-size: 16px;
     }
 
-    nav {
-        margin: 5px;
-    }
-
+    /* change nav lists to inline-flex and format for space between and around links */
     nav ul {
         display: inline-flex;
         flex-wrap: wrap;
@@ -327,7 +351,12 @@ p {
         margin: 5px;
     }
 
+    /* make individual links overflow to next line at 2nd link */
+    /* flex-basis 40% because taking margin into account */
     nav ul li {
         margin: 5px;
+        flex-basis: 40%;
+        flex-wrap: wrap;
     }
+
 }
