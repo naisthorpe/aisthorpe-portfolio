@@ -17,7 +17,7 @@ body {
 }
 
 /* remove bullets from lists */
-..no-bullet {
+.no-bullet {
     list-style-type: none;
 }
 
