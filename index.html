@@ -11,33 +11,38 @@
 
 <body>
 
-    <header class="inline-flex-wrap">
+    <!-- Classic header -->
+    <header class="flex-wrap">
         <h1>Nicholas Aisthorpe</h1>
-        <nav class="inline-flex-wrap">
-            <ul class="no-bullet">
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#work-section">Work</a></li>
-                <li><a href="#contact-me">Contact Me</a></li>
-                <li><a href="#">Resume</a></li>
+        <nav class="flex-end">
+            <ul class="spread-links no-bullet">
+                <li><a class="link head-link no-wrap no-underline" href="#about-me">About Me</a></li>
+                <li><a class="link head-link no-wrap no-underline" href="#work-section">Work</a></li>
+                <li><a class="link head-link no-wrap no-underline" href="#contact-me">Contact Me</a></li>
+                <li><a class="link head-link no-wrap no-underline" href="#">Resume</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
 
+        <!-- This is for my banner under header with subtitle -->
         <section class="head-background">
             <div class="subtitle"><h2>Computer Genius</h2></div>
         </section>
 
-        <section class="flex-end about-me">
+        <!-- This is my about me section -->
+        <section class="flex-wrap main-container">
             <div class="title">
                 About Me
             </div>
             <div class="content">
+                <!-- Nice little bolded intro to ease them in -->
                 <p class="bold-center">
                     Hi! You can call me Nick.
                 </p>
                 <br>
+                <!-- Go ahead, brag a little -->
                 <p>
                     I moved to Charlotte, NC
                     in the middle of 2019 from the Outerbanks of North Carolina. I have a background in 
@@ -55,41 +60,48 @@
             </div>
         </section>
 
-        <section class="flex-end about-me">
+        <!-- This is where my project work blocks will live -->
+        <section class="flex-wrap main-container">
             <div class="title">
                 Work
             </div>
-            <div class="work-blocks">
-                <div id="surf-report-block" class="work-block">
-                    <a class="div-link" href="#"></a>
+            <!-- Work blocks begin here -->
+            <div class="flex-wrap block-container">
+                <!-- Block 1 -->
+                <div id="surf-report-block" class="flex-wrap work-block">
+                    <a class="work-block-link" href="#"></a>
                     <div class="work-block-title"class="top-block-title">
                         <h3>Surf Report</h3>
                         <h5>MERN Stack</h5>
                     </div>
                 </div>
-                <div id="led-wall-block" class="work-block">
-                    <a class="div-link" href="#"></a>
+                <!-- Block 2 -->
+                <div id="led-wall-block" class="flex-wrap work-block">
+                    <a class="work-block-link" href="#"></a>
                     <div class="work-block-title">
                         <h3>LED Wall</h3>
                         <h5>Node/IoT</h5>
                     </div>
                 </div>
-                <div id="calculator-block" class="work-block">
-                    <a class="div-link" href="#"></a>
+                <!-- Block 3 -->
+                <div id="calculator-block" class="flex-wrap work-block">
+                    <a class="work-block-link" href="#"></a>
                     <div class="work-block-title">
                         <h3>Calculator</h3>
                         <h5>React/Javascript/CSS</h5>
                     </div>
                 </div>
-                <div id="pastel-puzzles-block" class="work-block">
-                    <a class="div-link" href="#"></a>
+                <!-- Block 4 -->
+                <div id="pastel-puzzles-block" class="flex-wrap work-block">
+                    <a class="work-block-link" href="#"></a>
                     <div class="work-block-title">
                         <h3>Pastel Puzzles</h3>
                         <h5>MERN Stack</h5>
                     </div>
                 </div>
-                <div id="run-buddy-block" class="work-block">
-                    <a class="div-link" href="#"></a>
+                <!-- Block 5 -->
+                <div id="run-buddy-block" class="flex-wrap work-block">
+                    <a class="work-block-link" href="#"></a>
                     <div class="work-block-title">
                         <h3>Run Buddy</h3>
                         <h5>HTML/CSS</h5>
@@ -98,18 +110,18 @@
             </div>
         </section>
 
-
-        <section class="flex-end about-me">
+        <!-- This is my Contact Me section -->
+        <section class="flex-wrap main-container">
             <div class="title">
                 Contact Me
             </div>
-
-            <nav class="content">
-                <ul class="inline-flex-wrap no-bullet">
-                    <li><a href="mailto:aisthorpe@gmail.com" target="_blank">Email</a></li>
-                    <li><a href="https://github.com/naisthorpe" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/nick-aisthorpe/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://open.spotify.com/user/nickais?si=3IA86MWLSj-BGmHZkMz5Lw" target="_blank">Spotify</a></li>
+            <!-- Links to contact resources -->
+            <nav class="flex-end content">
+                <ul class="spread-links no-bullet">
+                    <li><a class="link contact-link no-wrap no-underline" href="mailto:aisthorpe@gmail.com" target="_blank">Email</a></li>
+                    <li><a class="link contact-link no-wrap no-underline" href="https://github.com/naisthorpe" target="_blank">GitHub</a></li>
+                    <li><a class="link contact-link no-wrap no-underline" href="https://www.linkedin.com/in/nick-aisthorpe/" target="_blank">LinkedIn</a></li>
+                    <li><a class="link contact-link no-wrap no-underline" href="https://open.spotify.com/user/nickais?si=3IA86MWLSj-BGmHZkMz5Lw" target="_blank">Spotify</a></li>
                 </ul>
             </nav>
 

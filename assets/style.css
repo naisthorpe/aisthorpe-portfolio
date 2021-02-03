@@ -11,11 +11,13 @@ body {
 }
 
 /* class for flex with wrap */
-.inline-flex-wrap {
-    display: inline-flex;
+.flex-wrap {
+    display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
+/* class for regular flex with flex-end justification */
 .flex-end {
     display: flex;
     justify-content: flex-end;
@@ -42,25 +44,20 @@ header h1 {
 }
 
 header nav {
-    justify-content: flex-end;
     padding-top: 15px;
     flex-basis: 40%;
     color: #fff;
 }
 
-header nav ul {
+.spread-links {
     display: flex;
-    flex-basis: 80%;
-    color: #fff;
+    flex-basis: 100%; 
     justify-content: space-around;
     align-items: center;
-}
+} 
 
-header nav ul li {
-    display: flex;
-    width: 100%;
+.no-wrap {
     justify-content: center;
-    flex-wrap: nowrap;
     white-space: nowrap;
     text-align: center;
 }
@@ -90,20 +87,48 @@ header nav ul li {
     padding: 2px 4px;
 }
 
-/* formatting links */
-a {
+/* link with no decoration and bottom border */
+.no-underline {
     text-decoration: none;
-    color: #fff;
     padding: 0 2px 2px 2px;
     border-bottom: 2px solid #fff;
 }
 
-/* formatting hover for links */
-a:hover {
-    background-color: #d3d3d3;
-    color: #000000;
+/* formatting links */
+.link {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 2px 2px 2px;
 }
 
+/* for links in header nav */
+.head-link {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* formatting hover for links in header nav */
+.head-link:hover {
+    background-color: #fff;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* for links in contact section */
+.contact-link {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+/* formatting hover for contact links */
+.contact-link:hover {
+    background-color: #000000;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* paragraph formatting */
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -117,43 +142,67 @@ p {
     text-align: center;
 }
 
-.about-me {
-    margin: 2% auto;
-    flex-basis: 10%;
+.main-container {
+    margin: 3% auto;
 }
 
 .title {
+    justify-content: flex-end;
     flex-basis: 15%;
     padding-right: 5px;
     border-right: 2px solid black;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bolder;
     text-align: right;
 }
 
 .content {
-    display: flex;
     flex-direction: column;
-    flex-basis: 90%;
+    flex-basis: calc(85% - 5px);
     text-align: center;
 }
 
-.work-section {
-    display: flex;
-    flex-direction: row;
-    margin: 2% auto;
-    flex-basis: 10%;
-}
-
-.work-blocks {
-    display: inline-flex;
-    flex-wrap: wrap;
+.block-container {
+    /* display: inline-flex;
+    flex-wrap: wrap; */
     justify-content: space-around;
-    flex-basis: 90%;
+    flex-basis: 85%;
 }
 
+/* set other work block heights and features */
+.work-block {
+    height: 250px;
+    flex-basis: 45%;
+    border: 2px solid #fff;
+    margin: 10px 0;  
+    position: relative;  
+}
+
+.work-block:hover {
+    background-color: #000000;
+}
+
+.work-block-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #fff;
+    align-self: flex-end;
+    padding: 20px 10px;
+}
+
+.work-block-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+/* this section is where I set background images for work blocks */
 #surf-report-block {
-    flex-basis: 95%;
+    flex-basis: 95%; /* makes this block always the largest */
     background-image: url(images/surfingusa.png);  
     background-position: 25%;
 }
@@ -178,79 +227,12 @@ p {
     background-position: center;
 }
 
-.work-block {
-    display: flex;
-    flex-direction: row;
-    height: 250px;
-    flex-basis: 45%;
-    border: 2px solid #fff;
-    margin: 10px 0;  
-    position: relative;  
-}
-
-.work-block:hover {
-    background-color: #000000;
-}
-
-.work-block-title {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    background-color: #fff;
-    align-self: flex-end;
-    padding: 20px 10px;
-}
-
-.div-link {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.5;
-}
-
-footer {
-    display: inline-flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0 0 40px 0;
-    background-color: #303030;
-    padding: 15px 0;
-}
-
-footer .title {
-    display: inline-flex;
-    flex-basis: 14.5%;
-    color: #fff;
-}
-footer nav {
-    display: inline-flex;
-    justify-content: center;
-    flex-basis: 85.5%;
-    color: #fff;
-    align-items: center;
-}
-
-footer nav ul {
-    display: inline-flex;
-    flex-basis: 100%;
-    color: #fff;
-    justify-content: space-around;
-    list-style-type: none;
-}
-
-footer nav ul li {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-}
-
 @media screen and (max-width: 992px) {
     
     header {
         flex-direction: column;
         justify-content: center;
+        text-align: center;
     }
 
     header h1 {
@@ -262,33 +244,84 @@ footer nav ul li {
         flex-basis: 100%;
         justify-content: center;
     }
+
+    .flex-wrap {
+        justify-content: center;
+    }
+
+    .flex-end {
+        justify-content: center;
+    }
+
+    .main-container {
+        justify-content: center; 
+    }
     
     .title {
         border-right: none;
+        text-align: center;
         align-items: center;
         justify-content: center;
         font-size: 56px;
         padding-bottom: 2%;
         text-decoration: underline;
+        flex-basis: 100%;
     }
 
     p {
         text-align: center;
     }
 
-    #about-me {
-        flex-direction: column;
+    #surf-report-block {
+        flex-basis: 100%;
     }
 
-    #work-section {
-        flex-direction: column;
+    .block-container {
+        justify-content: space-between;
+        /* flex-wrap: nowrap; */
     }
 
-    .contact-me {
-        flex-direction: column;
+    .work-block {
+        justify-content: flex-start;
     }
 }
 
 @media screen and (max-width: 768px) {
+   
+    header nav {
+        padding-bottom: 10px;
+        flex-basis: 100%;
+    }
 
+    #surf-report-block {
+        flex-basis: auto;
+        background-position: 35%;
+    }
+
+    .work-block {
+        flex-basis: 100%;
+    }
+
+    .title {
+        font-size: 45px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+
+    nav {
+        margin: 5px;
+    }
+
+    nav ul {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 5px;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
 }
