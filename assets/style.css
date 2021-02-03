@@ -10,14 +10,14 @@ body {
     background-color: #D1D1D1;
 }
 
-/* class for flex with wrap */
+/* flex with wrap */
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
-/* class for regular flex with flex-end justification */
+/* regular flex with flex-end justification */
 .flex-end {
     display: flex;
     justify-content: flex-end;
@@ -49,7 +49,7 @@ header nav {
     color: #fff;
 }
 
-/* this spreads links across their container */
+/* spread links across their container */
 .spread-links {
     display: flex;
     flex-basis: 100%; 
@@ -57,7 +57,7 @@ header nav {
     align-items: center;
 } 
 
-/* this is a class to remove flex wrapping and center text */
+/* remove text wrapping and center text */
 .no-wrap {
     justify-content: center;
     white-space: nowrap;
