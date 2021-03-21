@@ -219,17 +219,17 @@ p {
 #surf-report-block {
     /* width 95% so there is some space on either side */
     flex-basis: 95%; /* makes this block always the largest */
-    background-image: url(images/surfingusa.png);  
+    background-image: url(images/stock-chart.jpg);  
     background-position: 25%;
 }
 
 #led-wall-block {
-     background-image: url(images/led.jpg);
-     background-position: center;
-  }
+    background-image: url(images/weather.jpg);
+    background-position: center;
+}
 
 #calculator-block {
-    background-image: url(images/calc.png);
+    background-image: url(images/code.jpg);
     background-position: center;
 }
 
